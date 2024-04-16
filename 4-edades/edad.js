@@ -16,3 +16,22 @@ Escriba un programa que:
 Tip: consulten los métodos de la clase Date
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 */
+
+function calcularEdad(fechaNacimiento) {
+  let nacimiento = new Date(fechaNacimiento);
+  let hoy = new Date();
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+  if (hoy.getMonth() < nacimiento.getMonth() || (hoy.getMonth() === nacimiento.getMonth() && hoy.getDate() < nacimiento.getDate())) {
+    edad--;
+  }
+  return edad;
+}
+
+let nombre = "Luciano";
+let apodo = "Rodriguez";
+let apellido = "Lucho";
+let fechaNacimiento = "2005-10-20";
+
+let edadJugador = calcularEdad(fechaNacimiento);
+
+console.log(nombre + ' "' + apodo + '" ' + apellido + ' (' + edadJugador + ' años)');

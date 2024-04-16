@@ -6,3 +6,6 @@ Escriba un programa que:
 - declare una variable "nombre" que será el nombre del director técnico (ustedes).
 - imprima en consola un mensaje saludando con el nombre usado.
 */
+
+var nombre= "Steffani";
+console.log("¡Hola " + nombre + "! Bienvenido  .");
